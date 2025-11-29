@@ -22,11 +22,16 @@ export default function EmailPrioritiesUI() {
           <FormControl fullWidth sx={{ mt: 1 }}>
             <InputLabel>Select Component</InputLabel>
             <Select
-              value={selectedComponent}
-              label="Select Component"
-              onChange={(e) => setSelectedComponent(e.target.value)}
+                value={selectedComponent}
+                label="Select Component"
+                onChange={(e) => setSelectedComponent(e.target.value)}
             >
-              {SUB_Components.map((c) => <MenuItem key={c} value={c}>{c}</MenuItem>)}
+                {SUB_Components.map((c) => 
+                <MenuItem key={c} value={c}>
+                 {c}
+                </MenuItem>
+                )}
+
             </Select>
           </FormControl>
         </Grid>
@@ -51,12 +56,12 @@ export default function EmailPrioritiesUI() {
           <Typography variant="h6" color="primary">Number of Days</Typography>
           <FormControl fullWidth sx={{ mt: 1 }}>
             <InputLabel>Select Range</InputLabel>
-            <Select
-              value={selectedFrequency}
-              label="Select Range"
-              onChange={(e) => setSelectedFrequency(e.target.value)}
+            <Select 
+            value={selectedFrequency}
+            label="Select Range"
+            onChange={(e) => setSelectedFrequency(e.target.value)}
             >
-              {Frequency.map((f) => <MenuItem key={f} value={f}>{f}</MenuItem>)}
+            {Frequency.map((f)=> <MenuItem key={f} value={f}>{f}</MenuItem>)}  
             </Select>
           </FormControl>
         </Grid>
