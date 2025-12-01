@@ -18,7 +18,7 @@ export default function EmailPrioritiesUI() {
       <Grid container spacing={2} alignItems="flex-start">
         {/* LEFT */}
         <Grid item xs={12} sm={3}>
-          <Typography variant="h6" color="primary">Components</Typography>
+          <Typography variant="h6" color="warning">Components</Typography>
           <FormControl fullWidth sx={{ mt: 1 }}>
             <InputLabel>Select Component</InputLabel>
             <Select
