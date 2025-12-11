@@ -12,6 +12,7 @@ export default function EmailPrioritiesUI() {
   const [selectedComponent, setSelectedComponent] = useState("");
   const [selectedFrequency, setSelectedFrequency] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("");
+  const [count, setCount] = useState(0);
 
   return (
     <Paper elevation={3} sx={{ p: 3, borderRadius: 2 }}>
@@ -66,6 +67,16 @@ export default function EmailPrioritiesUI() {
           </FormControl>
         </Grid>
       </Grid>
+      <div>
+   <h1> Vite + React</h1>
+    <div className="card">
+      <button onClick={ () => setCount((count)=> count+1)}>
+        count is {count}
+      </button>
+    </div>
+   </div>
     </Paper>
+   
+    
   );
 }
