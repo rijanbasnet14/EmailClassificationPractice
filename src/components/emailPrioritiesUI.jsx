@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { StrictMode, useState } from "react"
+
 import {
   Grid, Box, Typography, FormControl, InputLabel,
   Select, MenuItem, Paper, Chip
 } from "@mui/material";
+import GridExample from "./gridExample";
 
 export default function EmailPrioritiesUI() {
   const SUB_Components = ["CaaS", "SDQ", "Airflow", "ELK"];
@@ -12,14 +14,14 @@ export default function EmailPrioritiesUI() {
   const [selectedComponent, setSelectedComponent] = useState("");
   const [selectedFrequency, setSelectedFrequency] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("");
-  const [count, setCount] = useState(0);
+
 
   return (
     <Paper elevation={3} sx={{ p: 3, borderRadius: 2 }}>
       <Grid container spacing={2} alignItems="flex-start">
         {/* LEFT */}
         <Grid item xs={12} sm={3}>
-          <Typography variant="h6" color="warning">Components</Typography>
+          <Typography variant="h6" color="primary">Components</Typography>
           <FormControl fullWidth sx={{ mt: 1 }}>
             <InputLabel>Select Component</InputLabel>
             <Select
@@ -67,14 +69,13 @@ export default function EmailPrioritiesUI() {
           </FormControl>
         </Grid>
       </Grid>
-      <div>
-   <h1> Vite + React</h1>
-    <div className="card">
-      <button onClick={ () => setCount((count)=> count+1)}>
-        count is {count}
-      </button>
-    </div>
-   </div>
+         {/* Show the AG Grid panel */}
+        
+           <StrictMode>
+              <GridExample />
+           </StrictMode>
+       
+    
     </Paper>
    
     
