@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { StrictMode, useState } from "react"
+
 import {
   Grid, Box, Typography, FormControl, InputLabel,
   Select, MenuItem, Paper, Chip
 } from "@mui/material";
+import GridExample from "./gridExample";
 
 export default function EmailPrioritiesUI() {
   const SUB_Components = ["CaaS", "SDQ", "Airflow", "ELK"];
@@ -12,7 +14,7 @@ export default function EmailPrioritiesUI() {
   const [selectedComponent, setSelectedComponent] = useState("");
   const [selectedFrequency, setSelectedFrequency] = useState("");
   const [selectedStatus, setSelectedStatus] = useState("");
-  
+
 
   return (
     <Paper elevation={3} sx={{ p: 3, borderRadius: 2 }}>
@@ -67,6 +69,14 @@ export default function EmailPrioritiesUI() {
           </FormControl>
         </Grid>
       </Grid>
+         {/* Show the AG Grid panel */}
+        
+           <StrictMode>
+              <GridExample />
+           </StrictMode>
+       
+    
+  
     </Paper>
    
     
