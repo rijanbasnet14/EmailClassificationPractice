@@ -4,7 +4,6 @@ import {
   Grid, Box, Typography, FormControl, InputLabel,
   Select, MenuItem, Paper, Chip
 } from "@mui/material";
-import GridExample from "./gridExample";
 
 export default function EmailPrioritiesUI() {
   const SUB_Components = ["CaaS", "SDQ", "Airflow", "ELK"];
@@ -69,12 +68,8 @@ export default function EmailPrioritiesUI() {
           </FormControl>
         </Grid>
       </Grid>
-         {/* Show the AG Grid panel */}
         
-           <StrictMode>
-              <GridExample />
-           </StrictMode>
-       
+  
     
     </Paper>
    
